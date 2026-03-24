@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauc Time | Fresh Guac. Fast Bites.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gaucgreen: '#22c55e',
+                        gaucblack: '#111827',
+                        gaucgray: '#f3f4f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Simple popup logic for demonstration */
+        #promo-popup { display: flex; }
+    </style>
+</head>
+<body class="bg-white text-gaucblack antialiased">
+
+    <div id="promo-popup" class="fixed inset-0 z-[100] bg-black bg-opacity-50 items-center justify-center">
+        <div class="bg-white p-8 rounded-lg text-center max-w-sm w-full mx-4 shadow-2xl relative">
+            <button onclick="document.getElementById('promo-popup').style.display='none'" class="absolute top-2 right-4 text-gray-500 hover:text-black font-bold text-xl">&times;</button>
+            <h3 class="text-3xl font-extrabold text-gaucgreen mb-2">Wait!</h3>
+            <p class="text-lg font-semibold mb-6">Get 10% off your first order.</p>
+            <button onclick="document.getElementById('promo-popup').style.display='none'" class="w-full bg-gaucgreen text-white font-bold py-3 rounded hover:bg-green-600 transition">Claim Discount</button>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <a href="#home" class="text-2xl font-extrabold tracking-tighter text-gaucblack">GAUC<span class="text-gaucgreen">TIME</span></a>
+        <div class="hidden md:flex space-x-6 font-semibold">
+            <a href="#menu" class="hover:text-gaucgreen transition">Menu</a>
+            <a href="#about" class="hover:text-gaucgreen transition">About</a>
+            <a href="#contact" class="hover:text-gaucgreen transition">Contact</a>
+        </div>
+        <a href="#order" class="hidden md:block bg-gaucgreen text-white px-6 py-2 rounded-full font-bold hover:bg-green-600 transition shadow-lg">Order Now</a>
+    </nav>
+
+    <header id="home" class="relative bg-gaucblack text-white h-screen max-h-[700px] flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&q=80');">
+        <div class="text-center px-4 max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Fresh Guac. <br><span class="text-gaucgreen">Fast Bites.</span></h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-300">Delicious, made-to-order burritos, bowls, and loaded fries.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#order" class="bg-gaucgreen text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition shadow-lg">Order Now</a>
+                <a href="#menu" class="bg-white text-gaucblack px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition shadow-lg">View Menu</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-6 bg-gaucgray">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-center mb-12">Crowd Favorites</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition duration-300 relative">
+                    <span class="absolute top-4 left-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow z-10">🔥 Popular</span>
+                    <img src="https://images.unsplash.com/photo-1512152272829-408c758a59b0?auto=format&fit=crop&w=600&q=80" alt="Burrito Bowl" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Signature Bowl</h3>
+                        <a href="#order" class="text-gaucgreen font-bold hover:underline">Order Now &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition duration-300 relative">
+                    <span class="absolute top-4 left-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full shadow z-10">🔥 Popular</span>
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80" alt="Classic Burrito" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Classic Burrito</h3>
+                        <a href="#order" class="text-gaucgreen font-bold hover:underline">Order Now &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1643272445888-51368b6ebf45?auto=format&fit=crop&w=600&q=80" alt="Loaded Fries" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold mb-2">Loaded Guac Fries</h3>
+                        <a href="#order" class="text-gaucgreen font-bold hover:underline">Order Now &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-center mb-4">The Menu</h2>
+        <div class="bg-green-100 border-l-4 border-gaucgreen text-gaucgreen p-4 mb-12 text-center font-bold text-lg rounded-r">
+            Pro Tip: Add our signature fresh Guac to any item for +$2!
+        </div>
+        
+        <div class="space-y-12">
+            <div>
+                <h3 class="text-3xl font-bold border-b-2 border-gaucgray pb-2 mb-6">Burritos</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex gap-4 items-center">
+                        <div class="bg-gray-200 w-24 h-24 rounded-lg flex-shrink-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=200&q=80')"></div>
+                        <div>
+                            <div class="flex justify-between w-full"><h4 class="font-bold text-xl">The Classic</h4><span class="font-bold text-gaucgreen">$10.99</span></div>
+                            <p class="text-gray-600 text-sm">Rice, beans, choice of protein, cheese, pico de gallo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold border-b-2 border-gaucgray pb-2 mb-6">Bowls</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex gap-4 items-center">
+                        <div class="bg-gray-200 w-24 h-24 rounded-lg flex-shrink-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1512152272829-408c758a59b0?auto=format&fit=crop&w=200&q=80')"></div>
+                        <div>
+                            <div class="flex justify-between w-full"><h4 class="font-bold text-xl">Naked Burrito Bowl</h4><span class="font-bold text-gaucgreen">$11.99</span></div>
+                            <p class="text-gray-600 text-sm">All the burrito goodness, served over a bed of fresh greens or cilantro-lime rice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="py-20 px-6 bg-gaucblack text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-extrabold mb-8">Ready to Eat?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                <button class="bg-gaucgreen text-white text-xl font-bold py-6 rounded-xl hover:bg-green-600 transition shadow-lg">Order Pickup</button>
+                <button class="bg-white text-gaucblack text-xl font-bold py-6 rounded-xl hover:bg-gray-200 transition shadow-lg border-2 border-white">Order Delivery</button>
+            </div>
+            <p class="text-gray-400 mb-4">Or find us on your favorite delivery apps:</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-[#06C167] text-white px-6 py-2 rounded font-bold hover:opacity-90">Uber Eats</button>
+                <button class="bg-[#FF3008] text-white px-6 py-2 rounded font-bold hover:opacity-90">DoorDash</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-gaucgray">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-center mb-12">The Word on the Street</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                    <p class="italic text-gray-700 font-medium">"Best guac in the area, hands down."</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                    <p class="italic text-gray-700 font-medium">"Super fast and always fresh."</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                    <p class="italic text-gray-700 font-medium">"My go-to late night spot."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-6">Our Story</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                <strong class="text-gaucblack">Gauc Time</strong> was created to bring fresh, flavorful food to people who want something fast but still high quality. Every meal is made fresh with bold ingredients and our signature guac. No compromises, just good food.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-gaucblack text-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-8">Visit Us Today</h2>
+                <div class="space-y-6 text-lg">
+                    <p><strong>📍 Address:</strong><br> <span class="text-gray-400">123 Fresh Ave, Food District</span></p>
+                    <p><strong>📞 Phone:</strong><br> <span class="text-gaucgreen font-bold">(555) 123-4567</span></p>
+                    <div>
+                        <p><strong>🕒 Hours:</strong></p>
+                        <ul class="text-gray-400 mt-2 space-y-1">
+                            <li>Mon–Thu: 11am–10pm</li>
+                            <li>Fri–Sat: 11am–1am <span class="text-gaucgreen text-sm ml-2">Late Night!</span></li>
+                            <li>Sun: 12pm–9pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-800 h-80 rounded-xl flex items-center justify-center text-gray-500 border border-gray-700">
+                [Google Maps Embed Goes Here]
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-8">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#" class="hover:text-gaucgreen transition font-bold">Instagram</a>
+            <a href="#" class="hover:text-gaucgreen transition font-bold">TikTok</a>
+        </div>
+        <p class="text-gray-600 text-sm">&copy; 2026 Gauc Time. All rights reserved.</p>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 w-full z-50 p-4 bg-white border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <a href="#order" class="block w-full bg-gaucgreen text-white text-center py-4 rounded-full font-extrabold text-lg shadow-lg">Order Now</a>
+    </div>
+
+</body>
+</html>
